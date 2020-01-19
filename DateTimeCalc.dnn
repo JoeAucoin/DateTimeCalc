@@ -1,0 +1,76 @@
+﻿<dotnetnuke type="Package" version="5.0">
+  <packages><package name="GIBS.DateTimeCalc" type="Module" version="1.0.2">
+  <friendlyName>Date Time Calculator</friendlyName>
+  <description>GIBS Date Time Calculator</description>
+  <iconFile />
+  <owner>
+    <name />
+    <organization />
+    <url />
+    <email />
+  </owner>
+  <license>The license for this package is not currently included within the installation file, please check with the vendor for full license details.</license>
+  <releaseNotes />
+  <components>
+    <component type="Script">
+      <scripts>
+        <basePath>DesktopModules\GIBS\DateTimeCalc</basePath>
+        <script type="Install">
+          <name>01.00.00.SqlDataProvider</name>
+          <version>01.00.00</version>
+        </script>
+        <script type="UnInstall">
+          <name>Uninstall.SqlDataProvider</name>
+          <version>1.0.0</version>
+        </script>
+      </scripts>
+    </component>
+    <component type="Module">
+      <desktopModule>
+        <moduleName>GIBS.DateTimeCalc</moduleName>
+        <foldername>GIBS/DateTimeCalc</foldername>
+        <businessControllerClass />
+        <supportedFeatures />
+        <moduleDefinitions>
+          <moduleDefinition>
+            <friendlyName>Date Time Calculator</friendlyName>
+            <defaultCacheTime>0</defaultCacheTime>
+            <moduleControls>
+              <moduleControl>
+                <controlKey />
+                <controlSrc>DesktopModules/GIBS/DateTimeCalc/ViewDateTimeCalc.ascx</controlSrc>
+                <supportsPartialRendering>False</supportsPartialRendering>
+                <controlTitle />
+                <controlType>View</controlType>
+                <iconFile />
+                <helpUrl />
+                <supportsPopUps>False</supportsPopUps>
+                <viewOrder>0</viewOrder>
+              </moduleControl>
+              <moduleControl>
+                <controlKey>Settings</controlKey>
+                <controlSrc>DesktopModules/GIBS/DateTimeCalc/Settings.ascx</controlSrc>
+                <supportsPartialRendering>False</supportsPartialRendering>
+                <controlTitle>Module Settings</controlTitle>
+                <controlType>Edit</controlType>
+                <iconFile />
+                <helpUrl />
+                <supportsPopUps>False</supportsPopUps>
+                <viewOrder>0</viewOrder>
+              </moduleControl>
+            </moduleControls>
+          </moduleDefinition>
+        </moduleDefinitions>
+      </desktopModule>
+    </component>
+    <component type="Assembly">
+      <assemblies>
+        <basePath>bin</basePath>
+        <assembly>
+          <name>GIBS.Modules.DateTimeCalc.dll</name>
+        </assembly>
+      </assemblies>
+    </component>
+   </components>
+</package></packages>
+</dotnetnuke>
