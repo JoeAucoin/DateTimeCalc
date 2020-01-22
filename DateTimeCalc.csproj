@@ -87,13 +87,6 @@
     <Compile Include="Components\DateTimeCalcInfo.cs" />
     <Compile Include="Components\DateTimeCalcSettings.cs" />
     <Compile Include="Components\SqlDataProvider.cs" />
-    <Compile Include="EditDateTimeCalc.ascx.cs">
-      <DependentUpon>EditDateTimeCalc.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="EditDateTimeCalc.ascx.designer.cs">
-      <DependentUpon>EditDateTimeCalc.ascx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.ascx.cs">
       <DependentUpon>Settings.ascx</DependentUpon>
@@ -121,6 +114,7 @@
     <Content Include="BuildScripts\MSBuild.Community.Tasks.Targets" />
     <None Include="DateTimeCalc.dnn" />
     <None Include="Uninstall.SqlDataProvider" />
+    <Content Include="ReleaseNotes.txt" />
     <Content Include="web.config" />
     <None Include="web.config.old" />
     <None Include="web.config.Debug.old">
@@ -146,7 +140,6 @@
     <Content Include="App_LocalResources\ViewDateTimeCalc.ascx.resx">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="EditDateTimeCalc.ascx" />
     <Content Include="Settings.ascx" />
     <Content Include="ViewDateTimeCalc.ascx" />
   </ItemGroup>

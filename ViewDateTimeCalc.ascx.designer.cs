@@ -7,11 +7,22 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GIBS.Modules.DateTimeCalc {
-    
-    
-    public partial class ViewDateTimeCalc {
-        
+namespace GIBS.Modules.DateTimeCalc
+{
+
+
+    public partial class ViewDateTimeCalc
+    {
+
+        /// <summary>
+        /// LiteralContent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LiteralContent;
+
         /// <summary>
         /// lblContent control.
         /// </summary>

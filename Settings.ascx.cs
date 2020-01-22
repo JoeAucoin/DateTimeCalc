@@ -6,7 +6,7 @@ using GIBS.DateTimeCalc.Components;
 
 namespace GIBS.Modules.DateTimeCalc
 {
-    public partial class Settings : ModuleSettingsBase
+    public partial class Settings : DateTimeCalcSettings
     {
 
         /// <summary>
@@ -19,88 +19,81 @@ namespace GIBS.Modules.DateTimeCalc
             {
                 if (!IsPostBack)
                 {
-                    DateTimeCalcSettings settingsData = new DateTimeCalcSettings(this.TabModuleId);
+                    //     DateTimeCalcSettings settingsData = new DateTimeCalcSettings(this.TabModuleId);
 
-                    if (settingsData.Template != null)
+                    if (Template != null)
                     {
-                        txtTemplate.Text = settingsData.Template;
+                        txtTemplate.Text = Template;
                     }
 
-                    if (settingsData.StartDate != null)
+                    if (StartDate != null)
                     {
-                        txtStartDate.Text = settingsData.StartDate;
-                    }
-                    if (settingsData.EndDate != null)
-                    {
-                        txtEndDate.Text = settingsData.EndDate;
+                        txtStartDate.Text = StartDate;
                     }
 
-
-                    if (settingsData.ShowYears != string.Empty)
+                    if (EndDate != null)
                     {
-                        bool showyears;
-                        if (!bool.TryParse(settingsData.ShowYears, out showyears))
+                        txtEndDate.Text = EndDate;
+                    }
+
+                    if (ShowYears != null)
+                    {
+                        if (ShowYears.ToString().Length > 0)
                         {
-                            showyears = true; // Default to showing the description.
+                            cbxShowYears.Checked = Convert.ToBoolean(ShowYears.ToString());
                         }
-                        cbxShowYears.Checked = showyears;
                     }
 
-                    if (settingsData.ShowWeeks != string.Empty)
+                    if (ShowWeeks != null)
                     {
-                        bool showweeks;
-                        if (!bool.TryParse(settingsData.ShowWeeks, out showweeks))
+                        if (ShowWeeks.ToString().Length > 0)
                         {
-                            showweeks = true; // Default to showing the description.
+                            cbxShowWeeks.Checked = Convert.ToBoolean(ShowWeeks.ToString());
                         }
-                        cbxShowWeeks.Checked = showweeks;
                     }
 
+                    if (ShowMonths != null)
                     {
-                        bool showmonths;
-                        if (!bool.TryParse(settingsData.ShowMonths, out showmonths))
+                        if (ShowMonths.ToString().Length > 0)
                         {
-                            showmonths = true; // Default to showing the description.
+                            cbxShowMonths.Checked = Convert.ToBoolean(ShowMonths.ToString());
                         }
-                        cbxShowMonths.Checked = showmonths;
                     }
 
+                    if (ShowDays != null)
                     {
-                        bool showdays;
-                        if (!bool.TryParse(settingsData.ShowDays, out showdays))
+                        if (ShowDays.ToString().Length > 0)
                         {
-                            showdays = true; // Default to showing the description.
+                            cbxShowDays.Checked = Convert.ToBoolean(ShowDays.ToString());
                         }
-                        cbxShowDays.Checked = showdays;
                     }
 
+                    if (ShowHours != null)
                     {
-                        bool showhours;
-                        if (!bool.TryParse(settingsData.ShowHours, out showhours))
+                        if (ShowHours.ToString().Length > 0)
                         {
-                            showhours = true; // Default to showing the description.
+                            cbxShowHours.Checked = Convert.ToBoolean(ShowHours.ToString());
                         }
-                        cbxShowHours.Checked = showhours;
                     }
 
-                    {
-                        bool showminutes;
-                        if (!bool.TryParse(settingsData.ShowMinutes, out showminutes))
-                        {
-                            showminutes = true; // Default to showing the description.
-                        }
-                        cbxShowMinutes.Checked = showminutes;
-                    }	
 
-                    if (settingsData.ShowSeconds != string.Empty)
+                    if (ShowMinutes != null)
                     {
-                        bool showseconds;
-                        if (!bool.TryParse(settingsData.ShowSeconds, out showseconds))
+                        if (ShowMinutes.ToString().Length > 0)
                         {
-                            showseconds = true; // Default to showing the description.
+                            cbxShowMinutes.Checked = Convert.ToBoolean(ShowMinutes.ToString());
                         }
-                        cbxShowSeconds.Checked = showseconds;
                     }
+
+                    if (ShowSeconds != null)
+                    {
+                        if (ShowSeconds.ToString().Length > 0)
+                        {
+                            cbxShowSeconds.Checked = Convert.ToBoolean(ShowSeconds.ToString());
+                        }
+                    }
+
+
                 }
             }
             catch (Exception ex)
@@ -116,18 +109,20 @@ namespace GIBS.Modules.DateTimeCalc
         {
             try
             {
-                DateTimeCalcSettings settingsData = new DateTimeCalcSettings(this.TabModuleId);
-                settingsData.Template = txtTemplate.Text;
-                settingsData.StartDate = txtStartDate.Text;
-                settingsData.EndDate = txtEndDate.Text;
+                var modules = new ModuleController();
 
-                settingsData.ShowYears = cbxShowYears.Checked.ToString();
-                settingsData.ShowWeeks = cbxShowWeeks.Checked.ToString();
-                settingsData.ShowSeconds = cbxShowSeconds.Checked.ToString();
-                settingsData.ShowMonths = cbxShowMonths.Checked.ToString();
-                settingsData.ShowMinutes = cbxShowMinutes.Checked.ToString();
-                settingsData.ShowHours = cbxShowHours.Checked.ToString();
-                settingsData.ShowDays = cbxShowDays.Checked.ToString();
+                modules.UpdateModuleSetting(ModuleId, "Template", txtTemplate.Text.ToString());
+                modules.UpdateModuleSetting(ModuleId, "StartDate", txtStartDate.Text.ToString());
+                modules.UpdateModuleSetting(ModuleId, "EndDate", txtEndDate.Text.ToString());
+                modules.UpdateModuleSetting(ModuleId, "ShowYears", cbxShowYears.Checked.ToString());
+                modules.UpdateModuleSetting(ModuleId, "ShowWeeks", cbxShowWeeks.Checked.ToString());
+                modules.UpdateModuleSetting(ModuleId, "ShowSeconds", cbxShowSeconds.Checked.ToString());
+                modules.UpdateModuleSetting(ModuleId, "ShowMonths", cbxShowMonths.Checked.ToString());
+                modules.UpdateModuleSetting(ModuleId, "ShowMinutes", cbxShowMinutes.Checked.ToString());
+                modules.UpdateModuleSetting(ModuleId, "ShowHours", cbxShowHours.Checked.ToString());
+                modules.UpdateModuleSetting(ModuleId, "ShowDays", cbxShowDays.Checked.ToString());
+
+
 
             }
             catch (Exception ex)

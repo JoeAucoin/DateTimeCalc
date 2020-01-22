@@ -8,36 +8,9 @@
 /*****                                                  *****/
 /************************************************************/
 
-/** Drop FAQs Table **/
+/** Drop Table **/
 
-ALTER TABLE {databaseOwner}[{objectQualifier}GIBS_DateTimeCalc] DROP CONSTRAINT [FK_{objectQualifier}GIBS_DateTimeCalc_{objectQualifier}Modules]
-GO
 
-ALTER TABLE {databaseOwner}[{objectQualifier}GIBS_DateTimeCalc] DROP CONSTRAINT [PK_{objectQualifier}GIBS_DateTimeCalc]
-GO
-
-DROP INDEX {databaseOwner}[{objectQualifier}GIBS_DateTimeCalc].[IX_{objectQualifier}GIBS_DateTimeCalc]
-GO
-
-DROP TABLE {databaseOwner}[{objectQualifier}GIBS_DateTimeCalc]
-GO
-
-/** Drop Stored Procedures **/
-
-DROP PROCEDURE {databaseOwner}[{objectQualifier}GIBS_GetDateTimeCalcs]
-GO
-
-DROP PROCEDURE {databaseOwner}[{objectQualifier}GIBS_GetDateTimeCalc]
-GO
-
-DROP PROCEDURE {databaseOwner}[{objectQualifier}GIBS_AddDateTimeCalc]
-GO
-
-DROP PROCEDURE {databaseOwner}[{objectQualifier}GIBS_UpdateDateTimeCalc]
-GO
-
-DROP PROCEDURE {databaseOwner}[{objectQualifier}GIBS_DeleteDateTimeCalc]
-GO
 
 /************************************************************/
 /*****              SqlDataProvider                     *****/

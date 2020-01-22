@@ -1,29 +1,28 @@
 ﻿<dotnetnuke type="Package" version="5.0">
-  <packages><package name="GIBS.DateTimeCalc" type="Module" version="1.0.2">
+  <packages><package name="GIBS.DateTimeCalc" type="Module" version="1.0.5">
   <friendlyName>Date Time Calculator</friendlyName>
   <description>GIBS Date Time Calculator</description>
   <iconFile />
-  <owner>
-    <name />
-    <organization />
-    <url />
-    <email />
-  </owner>
+    <owner>
+      <name>GIBS.com</name>
+      <organization>GIBS.com</organization>
+      <url>http://www.gibs.com/</url>
+      <email>webmaster@gibs.com</email>
+    </owner>
   <license>The license for this package is not currently included within the installation file, please check with the vendor for full license details.</license>
-  <releaseNotes />
+    <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
+    <azureCompatible>true</azureCompatible>
+    <dependencies>
+      <dependency type="CoreVersion">07.00.02</dependency>
+    </dependencies>
   <components>
-    <component type="Script">
-      <scripts>
-        <basePath>DesktopModules\GIBS\DateTimeCalc</basePath>
-        <script type="Install">
-          <name>01.00.00.SqlDataProvider</name>
-          <version>01.00.00</version>
-        </script>
-        <script type="UnInstall">
-          <name>Uninstall.SqlDataProvider</name>
-          <version>1.0.0</version>
-        </script>
-      </scripts>
+    <component type="ResourceFile">
+      <resourceFiles>
+        <basePath>DesktopModules/GIBS/DateTimeCalc</basePath>
+        <resourceFile>
+          <name>Resources.zip</name>
+        </resourceFile>
+      </resourceFiles>
     </component>
     <component type="Module">
       <desktopModule>
@@ -34,6 +33,7 @@
         <moduleDefinitions>
           <moduleDefinition>
             <friendlyName>Date Time Calculator</friendlyName>
+            <definitionName>Date Time Calculator</definitionName>
             <defaultCacheTime>0</defaultCacheTime>
             <moduleControls>
               <moduleControl>
