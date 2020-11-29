@@ -1,8 +1,8 @@
 ﻿<dotnetnuke type="Package" version="5.0">
-  <packages><package name="GIBS.DateTimeCalc" type="Module" version="1.0.5">
+  <packages><package name="GIBS.DateTimeCalc" type="Module" version="1.0.6">
   <friendlyName>Date Time Calculator</friendlyName>
   <description>GIBS Date Time Calculator</description>
-  <iconFile />
+    <iconFile>DateTime.png</iconFile>
     <owner>
       <name>GIBS.com</name>
       <organization>GIBS.com</organization>
