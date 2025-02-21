@@ -29,14 +29,16 @@ namespace GIBS.Modules.DateTimeCalc
                     LoadSettings();
 
                     TimeSpan span = vEndDate.Subtract(vStartDate);
+                    
                     string weeks  = String.Format("{0:0.00}", span.TotalDays / 7);
                     // int weeks = (int) span.TotalDays / 7;
                     //string months = String.Format("{0:0.00}", span.TotalDays / 31);
                     //Period period = Period.Between(start, end, PeriodUnits.Months);
-                    double months = vEndDate.Subtract(vStartDate).Days / (365.25 / 12);
+                    double months = vEndDate.Subtract(vStartDate).Days / (365.2425 / 12);
 
                     // vEndDate
-                    string years = String.Format("{0:0.00}", span.TotalDays / 365); 
+                 //   string years = String.Format("{0:0.00}", span.TotalDays / 365);
+                    string years = String.Format("{0:0.00}", span.TotalDays / 365.2425);
 
 
                     if (vShowYears == true)

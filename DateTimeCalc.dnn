@@ -1,5 +1,5 @@
 ﻿<dotnetnuke type="Package" version="5.0">
-  <packages><package name="GIBS.DateTimeCalc" type="Module" version="1.0.6">
+  <packages><package name="GIBS.DateTimeCalc" type="Module" version="1.0.7">
   <friendlyName>Date Time Calculator</friendlyName>
   <description>GIBS Date Time Calculator</description>
     <iconFile>DateTime.png</iconFile>
@@ -13,7 +13,7 @@
     <releaseNotes src="ReleaseNotes.txt"></releaseNotes>
     <azureCompatible>true</azureCompatible>
     <dependencies>
-      <dependency type="CoreVersion">07.00.02</dependency>
+      <dependency type="CoreVersion">09.00.02</dependency>
     </dependencies>
   <components>
     <component type="ResourceFile">
